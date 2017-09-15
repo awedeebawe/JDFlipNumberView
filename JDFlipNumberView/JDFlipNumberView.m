@@ -73,15 +73,6 @@ typedef NS_OPTIONS(NSUInteger, JDFlipAnimationDirection) {
     }
     return self;
 }
-    
-- (id)initWithDigitCount:(NSUInteger)digitCount
-       calendarComponent:(JDCalendarComponentType)component {
-    if component == JDCalendarComponentTypeDays {
-        NSLog(@"Days")
-    } else {
-        NSLog(@"Drugo")
-    }
-}
 
 - (void)commonInitForDigitCount:(NSUInteger)digitCount;
 {

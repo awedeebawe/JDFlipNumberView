@@ -32,8 +32,6 @@ typedef void(^JDFlipAnimationCompletionBlock)(BOOL finished);
 - (id)initWithDigitCount:(NSUInteger)digitCount;
 - (id)initWithDigitCount:(NSUInteger)digitCount
          imageBundleName:(NSString*)imageBundleName;
-- (id)initWithDigitCount:(NSUInteger)digitCount
-         calendarComponent:(JDCalendarComponentType)component;
 
 // direct value manipulation (jump to value)
 - (void)setValue:(NSInteger)newValue animated:(BOOL)animated;

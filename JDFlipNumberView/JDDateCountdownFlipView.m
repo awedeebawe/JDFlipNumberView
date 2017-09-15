@@ -42,7 +42,18 @@ static CGFloat kFlipAnimationUpdateInterval = 0.5; // = 2 times per second
 {
     return [self initWithDayDigitCount:dayDigits imageBundleName:nil];
 }
-
+    
+- (id)initWithDayDigitCount:(NSInteger)dayDigits
+               calendarType:(JDCalendarComponentType)type {
+    if(type == JDCalendarComponentTypeDays) {
+        NSLog(@"Days");
+    } else {
+        NSLog(@"Drugo");
+    }
+    
+    return [self initWithDayDigitCount:dayDigits imageBundleName:nil];
+}
+    
 - (id)initWithDayDigitCount:(NSInteger)dayDigits
             imageBundleName:(NSString*)imageBundleName;
 {

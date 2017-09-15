@@ -14,6 +14,8 @@
 - (id)initWithDayDigitCount:(NSInteger)dayDigits;
 - (id)initWithDayDigitCount:(NSInteger)dayDigits
             imageBundleName:(NSString*)imageBundleName;
+- (id)initWithDayDigitCount:(NSInteger)dayDigits
+               calendarType:(JDCalendarComponentType)type;
 
 - (void)start;
 - (void)stop;
