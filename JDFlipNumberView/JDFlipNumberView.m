@@ -16,8 +16,8 @@ static CGFloat JDFlipViewRelativeMargin = 0.05; // use 5% of width as margin
 
 
 typedef NS_OPTIONS(NSUInteger, JDFlipAnimationDirection) {
-	JDFlipAnimationDirectionUp,
-	JDFlipAnimationDirectionDown
+    JDFlipAnimationDirectionUp,
+    JDFlipAnimationDirectionDown
 };
 
 @interface JDFlipNumberView ()
@@ -72,6 +72,15 @@ typedef NS_OPTIONS(NSUInteger, JDFlipAnimationDirection) {
         [self commonInitForDigitCount:digitCount];
     }
     return self;
+}
+    
+- (id)initWithDigitCount:(NSUInteger)digitCount
+       calendarComponent:(JDCalendarComponentType)component {
+    if component == JDCalendarComponentTypeDays {
+        NSLog(@"Days")
+    } else {
+        NSLog(@"Drugo")
+    }
 }
 
 - (void)commonInitForDigitCount:(NSUInteger)digitCount;

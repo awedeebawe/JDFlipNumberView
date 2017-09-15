@@ -5,7 +5,12 @@
 //  Copyright 2011 Markus Emrich. All rights reserved.
 //
 
-
+typedef NS_OPTIONS(NSUInteger, JDCalendarComponentType) {
+    JDCalendarComponentTypeDays,
+    JDCalendarComponentTypeHours,
+    JDCalendarComponentTypeMinutes,
+    JDCalendarComponentTypeSeconds
+};
 
 @protocol JDFlipNumberViewDelegate;
 
@@ -27,6 +32,8 @@ typedef void(^JDFlipAnimationCompletionBlock)(BOOL finished);
 - (id)initWithDigitCount:(NSUInteger)digitCount;
 - (id)initWithDigitCount:(NSUInteger)digitCount
          imageBundleName:(NSString*)imageBundleName;
+- (id)initWithDigitCount:(NSUInteger)digitCount
+         calendarComponent:(JDCalendarComponentType)component;
 
 // direct value manipulation (jump to value)
 - (void)setValue:(NSInteger)newValue animated:(BOOL)animated;
